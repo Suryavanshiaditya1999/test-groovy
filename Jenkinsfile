@@ -16,6 +16,6 @@ node {
 
     stage('Setup and Coverage') {
         // Call the function from the shared library
-        Depen.run()
+        Depen.call()
     }
 }
