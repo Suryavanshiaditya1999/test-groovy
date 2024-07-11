@@ -21,11 +21,9 @@ node {
         new Depen().call(workspaceDir)
     }
     
-    post {
-        always {
-            echo 'Cleaning up...'
-            sh 'deactivate'
-            sh 'rm -rf myenv'
-        }
+    stage('Clean up') {
+        echo 'Cleaning up...'
+        sh 'deactivate'
+        sh 'rm -rf myenv'
     }
 }
