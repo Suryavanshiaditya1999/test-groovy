@@ -1,3 +1,5 @@
+@Library('my-shared-lib') _
+
 import org.example.Depen
 
 def depen = new Depen()
