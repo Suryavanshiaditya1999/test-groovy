@@ -1,6 +1,6 @@
 @Library('my-shared-lib') _
 
-import Dependency
+import org.example.Depen
 
 node {
     stage('Checkout') {
@@ -16,6 +16,6 @@ node {
 
     stage('Setup and Coverage') {
         // Call the function from the shared library
-        dependency.run()
+        Depen.run()
     }
 }
