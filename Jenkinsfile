@@ -2,6 +2,8 @@
 
 import org.example.Depen
 
+def depen = new Depen()
+
 node {
     def workspaceDir = "${WORKSPACE}"
     
@@ -18,7 +20,7 @@ node {
 
     stage('Setup and Coverage') {
         // Call the function from the shared library with workspaceDir as argument
-        new Depen().call(workspaceDir)
+        depen.call(workspaceDir)
     }
     
     stage('Clean up') {
