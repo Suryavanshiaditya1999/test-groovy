@@ -1,7 +1,8 @@
-// src/vars/org/example/dependency.groovy
-
 def setupVirtualEnvironment() {
-    sh '''
-    echo "Setting up virtual environment"
-    '''
+    return {
+        sh '''
+        echo "Setting up virtual environment"
+        # Additional shell commands as needed
+        '''
+    }
 }
