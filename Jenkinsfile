@@ -20,12 +20,12 @@ node {
 
     stage('Setup and Coverage') {
         // Call the function from the shared library with workspaceDir as argument
-        depen.call(workspaceDir)
+        depen.setupAndRunTests(workspaceDir)
     }
     
     stage('Clean up') {
         echo 'Cleaning up...'
-        sh 'deactivate'
-        sh 'rm -rf myenv'
+        sh 'deactivate'  // Deactivate the virtual environment
+        sh 'rm -rf myenv' // Remove the virtual environment
     }
 }
