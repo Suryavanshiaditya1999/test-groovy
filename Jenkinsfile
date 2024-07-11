@@ -3,6 +3,8 @@
 import org.example.Depen
 
 node {
+    def workspaceDir = "${WORKSPACE}"
+    
     stage('Checkout') {
         // Check out the repository
         checkout([$class: 'GitSCM', 
@@ -15,8 +17,8 @@ node {
     }
 
     stage('Setup and Coverage') {
-        // Call the function from the shared library
-        new Depen().call()
+        // Call the function from the shared library with workspaceDir as argument
+        new Depen().call(workspaceDir)
     }
     
     post {
