@@ -1,8 +1,8 @@
 package org.example
 
 class Depen {
-    void setupAndRunTests(String workspaceDir) {
-        // Instead of using pwd(), use the WORKSPACE environment variable directly
+    void setupAndRunTests(Map<String, String> env, String workspaceDir) {
+        // Now you can access the env object directly
         echo "Current directory: ${env.WORKSPACE}"
         echo "Workspace directory: ${workspaceDir}"
         
