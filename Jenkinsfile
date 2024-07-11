@@ -2,6 +2,8 @@
 
 @Library('my-shared-lib') _
 
+import org.example.Dependency
+
 pipeline {
     agent any
 
@@ -9,8 +11,9 @@ pipeline {
         stage('Setup Environment') {
             steps {
                 script {
-                    def setupFunction = org.example.Dependency.setupVirtualEnvironment()
-                    setupFunction()
+                    def dependency = new Dependency()
+                    def setupFunction = dependency.setupVirtualEnvironment()
+                    setupFunction.call()
                 }
             }
         }
