@@ -1,8 +1,7 @@
 package org.example
 
 class Depen {
-    void call() {
-        def workspaceDir = "${WORKSPACE}"
+    void call(workspaceDir) {
         println "Current directory: ${pwd()}"
         println "Workspace directory: ${workspaceDir}"
         sh """
