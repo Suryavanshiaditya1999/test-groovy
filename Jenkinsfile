@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     // Call the HelloWorld class method
-                    org.example.HelloWorld.sayHello()
+                    org.example.Dependency.sayHello()
                 }
             }
         }
