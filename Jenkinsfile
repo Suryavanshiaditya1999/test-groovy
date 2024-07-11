@@ -1,5 +1,3 @@
-@Library('my-shared-lib') _
-
 import org.example.Depen
 
 def depen = new Depen()
@@ -19,8 +17,8 @@ node {
     }
 
     stage('Setup and Coverage') {
-        // Call the function from the shared library with workspaceDir as argument
-        depen.setupAndRunTests(workspaceDir)
+        // Pass both workspaceDir and env to the setupAndRunTests method
+        depen.setupAndRunTests(env, workspaceDir)
     }
     
     stage('Clean up') {
