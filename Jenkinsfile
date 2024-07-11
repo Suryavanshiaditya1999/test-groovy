@@ -16,6 +16,14 @@ node {
 
     stage('Setup and Coverage') {
         // Call the function from the shared library
-        Depen.call()
+        new Depen().call()
+    }
+    
+    post {
+        always {
+            echo 'Cleaning up...'
+            sh 'deactivate'
+            sh 'rm -rf myenv'
+        }
     }
 }
