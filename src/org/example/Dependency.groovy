@@ -1,7 +1,7 @@
-package org.example
+// src/vars/org/example/dependency.groovy
 
 def setupVirtualEnvironment() {
     sh '''
-    echo " Hello world " 
+    echo "Setting up virtual environment"
     '''
 }
