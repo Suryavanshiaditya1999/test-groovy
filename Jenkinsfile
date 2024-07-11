@@ -1,5 +1,7 @@
 @Library('my-shared-lib') _
 
+import Dependency
+
 node {
     stage('Checkout') {
         // Check out the repository
@@ -14,6 +16,6 @@ node {
 
     stage('Setup and Coverage') {
         // Call the function from the shared library
-        dependency.call()
+        dependency.run()
     }
 }
