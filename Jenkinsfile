@@ -1,15 +1,14 @@
 @Library('my-shared-lib') _
 
-import org.example.Dependency
-
 pipeline {
     agent any
 
     stages {
-        stage('Example') {
+        stage('Hello World') {
             steps {
                 script {
-                    Dependency()
+                    // Call the HelloWorld class method
+                    org.example.HelloWorld.sayHello()
                 }
             }
         }
