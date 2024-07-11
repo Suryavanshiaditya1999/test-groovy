@@ -1,8 +1,8 @@
-@Library('shared-lib') _
+@Library('my-shared-lib') _
 
 node {
     stage('Setup and Coverage') {
-        coveragepython.call()
+        dependency.call()
     }
     
 }
