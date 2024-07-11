@@ -1,3 +1,5 @@
+package org.example
+
 def setupVirtualEnvironment() {
         sh '''
         echo "Setting up virtual environment"
