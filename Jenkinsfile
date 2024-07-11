@@ -7,7 +7,7 @@ pipeline {
         stage('Setup Environment') {
             steps {
                 script {
-                    org.dependency.setupVirtualEnvironment()
+                    org.example.Dependency.setupVirtualEnvironment()
                 }
             }
         }
