@@ -4,13 +4,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello World') {
+        stage('Setup Environment') {
             steps {
                 script {
-                    // Call the HelloWorld class method
-                    org.example.Dependency.sayHello()
+                    org.dependency.setupVirtualEnvironment()
                 }
             }
         }
+       
     }
 }
