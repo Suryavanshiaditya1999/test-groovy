@@ -2,11 +2,11 @@ package org.example
 
 class Depen {
     void setupAndRunTests(String workspaceDir) {
-        // Execute shell commands directly in the Jenkinsfile
-        // This method is designed to set up the environment and run tests
-        echo "Current directory: ${pwd()}"
+        // Instead of using pwd(), use the WORKSPACE environment variable directly
+        echo "Current directory: ${env.WORKSPACE}"
         echo "Workspace directory: ${workspaceDir}"
-        // You can optionally log the contents of the workspace directory
+        
+        // Your existing setup and test execution commands...
         sh "ls -la ${workspaceDir}"
         sh "python3 -m venv myenv"
         sh ". myenv/bin/activate"
