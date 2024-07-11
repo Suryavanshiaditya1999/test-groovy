@@ -1,6 +1,6 @@
 @Library('my-shared-lib') _
 
-import org.example.Depen
+import org.example.Dependency
 
 pipeline {
     agent any
@@ -9,8 +9,7 @@ pipeline {
         stage('Example') {
             steps {
                 script {
-                    // Call your function from shared library
-                    Depen()
+                    Dependency()
                 }
             }
         }
