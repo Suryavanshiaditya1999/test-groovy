@@ -9,7 +9,8 @@ pipeline {
         stage('Setup Environment') {
             steps {
                 script {
-                    org.example.dependency.setupVirtualEnvironment()
+                    def setupFunction = org.example.dependency.setupVirtualEnvironment()
+                    setupFunction()
                 }
             }
         }
