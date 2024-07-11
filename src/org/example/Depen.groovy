@@ -2,8 +2,6 @@ package org.example
 
 class Depen {
     void call(workspaceDir) {
-        println "Current directory: ${pwd()}"
-        println "Workspace directory: ${workspaceDir}"
         sh """
             ls -la ${workspaceDir}
             python3 -m venv myenv
