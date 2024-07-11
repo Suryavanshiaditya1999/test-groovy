@@ -1,3 +1,7 @@
-def call() {
-    sh 'echo " hello world " '
+package org.example
+
+class HelloWorld {
+    static void sayHello() {
+        println "Hello, World!"
+    }
 }
