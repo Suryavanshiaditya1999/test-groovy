@@ -1,8 +1,14 @@
+// src/org/example/Dependency.groovy
+
 package org.example
 
-def setupVirtualEnvironment() {
-        sh '''
-        echo "Setting up virtual environment"
-        # Additional shell commands as needed
-        '''
+class Dependency {
+    def setupVirtualEnvironment() {
+        return {
+            sh '''
+            echo "Setting up virtual environment"
+            # Additional shell commands as needed
+            '''
+        }
+    }
 }
